@@ -1,0 +1,30 @@
+.info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3b3b3b;
+  border-radius: 1.25rem;
+  margin-top: 1.15rem;
+  padding: 1rem;
+  max-width: 330px;
+  text-align: center;
+  .icon {
+    max-width: 205px;
+  }
+}
+.container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  h2 {
+    margin: 0%;
+  }
+  h3 {
+    text-align: left;
+  }
+}
+.info-card-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3.5rem;
+}
