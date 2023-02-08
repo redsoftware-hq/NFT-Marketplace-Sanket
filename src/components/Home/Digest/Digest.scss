@@ -1,0 +1,28 @@
+.digest {
+  max-width: 1280px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  max-height: 550px;
+  .digest-card {
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
+    border-radius: 1.25rem;
+    padding: 60px;
+    background-color: #3b3b3b;
+    margin: auto;
+  }
+  .subscribe {
+    h2 {
+      font-weight: 600;
+      font-size: 2.5rem;
+    }
+    span {
+      font-size: 1.5rem;
+    }
+  }
+  img {
+    width: 425px;
+    height: 310px;
+    padding: 0.5rem;
+  }
+}
