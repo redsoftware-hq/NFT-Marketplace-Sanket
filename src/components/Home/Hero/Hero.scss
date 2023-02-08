@@ -1,0 +1,44 @@
+@import '../../../global.scss';
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+  justify-items: center;
+  max-height: 704px;
+  h1 {
+    @include title;
+  }
+  p {
+    @include subheading;
+  }
+  .site-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    span {
+      font-weight: 700;
+      font-size: 1.25rem;
+      font-family: 'Space Mono';
+    }
+    div {
+      @include subheading;
+    }
+  }
+}
+.nft-card {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  background-color: $secondary-bg;
+  border-radius: 6%;
+  h2 {
+    @include subheading;
+    font-weight: 600;
+    margin: 0;
+    padding: 0.5rem;
+  }
+  h3 {
+    @include base-body-text;
+    padding: 0 1rem 1rem 1rem;
+    margin: 0;
+  }
+}
