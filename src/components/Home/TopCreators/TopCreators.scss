@@ -1,0 +1,43 @@
+@import '../../../global.scss';
+.creator-rank-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.5rem;
+  justify-content: center;
+}
+.creator-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 7.5%;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem;
+  max-height: 240px;
+  background-color: $secondary-bg;
+  img {
+    padding: 0.75rem;
+    max-width: 120px;
+    border-radius: 100%;
+  }
+  h4 {
+    @include subheading;
+    text-align: center;
+    margin: 0;
+    font-weight: 600;
+  }
+  div {
+    color: $caption-color;
+  }
+  span {
+    font-family: 'Space Mono';
+    color: white;
+  }
+}
+.btn-container {
+ @include btn-container;
+}
+.top-creators {
+  h2 {
+    margin-bottom: 0;
+  }
+}
