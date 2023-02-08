@@ -1,0 +1,13 @@
+@import "../../../global.scss";
+.secondary-filled {
+    @include base-body-text;
+    @include base-btn;
+    border: 0;
+    background-color: $accent;
+}
+.secondary-outlined {
+    @include base-body-text;
+    @include base-btn;
+    background-color:$primary-bg ;
+    border: 2px solid $accent;
+}
