@@ -1,0 +1,65 @@
+@import '../../../global.scss';
+.price-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  span {
+    color: $caption-color;
+    font-family: 'Space Mono';
+    @include caption;
+  }
+  div {
+    font-family: 'Space Mono';
+    @include caption;
+  }
+}
+.artist-info {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1rem;
+  h5 {
+    font-family: 'Space Mono';
+    @include base-body-text;
+    margin: 0;
+  }
+}
+.nftCardList {
+  display: flex;
+  flex-direction: row;
+  gap: 3.5rem;
+  justify-content: center;
+  //   width: 100%;
+}
+.nftCard {
+  //   flex-basis: 35%;
+  background: #3b3b3b;
+  border-radius: 5%;
+  max-width: 330px;
+  max-height: 469px;
+  h4 {
+    padding: 0.5rem 1rem 0 1rem;
+    margin: 0;
+    @include subheading;
+    font-weight: 600;
+  }
+}
+.button-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  h3 {
+    margin-top: 0.5rem;
+  }
+}
+.discover {
+  margin-bottom: 1rem;
+  h2 {
+    margin: 0;
+  }
+}
+.btn-container {
+  @include btn-container;
+}
