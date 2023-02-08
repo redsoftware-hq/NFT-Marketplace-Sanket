@@ -1,0 +1,51 @@
+$caption-color: #858584;
+$primary-bg: #2b2b2b;
+$secondary-bg: #3b3b3b;
+$accent: #a259ff;
+$border-raidus: 20px;
+
+@mixin title {
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+@mixin heading {
+  font-weight: 600;
+  font-size: 2.25rem;
+}
+
+@mixin subheading {
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+@mixin caption {
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+@mixin base-body-text {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+@mixin base-btn {
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem 2.25rem;
+    max-height: 60px;
+    margin-bottom: 1rem;
+    border-radius: $border-raidus;
+    font-weight: 600;
+}
+
+@mixin btn-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
