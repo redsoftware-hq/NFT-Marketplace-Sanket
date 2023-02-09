@@ -1,0 +1,42 @@
+@import "../../global.scss";
+.connect-wallet-btn {
+  .wallet-icon {
+    padding: 0 1rem 0 1rem;
+  }
+  background-color: $secondary-bg;
+  border: 2px solid $accent;
+  border-radius: $border-raidus;
+  display: flex;
+  flex-direction: row;
+  gap: 0.7rem;
+  justify-content: start;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  align-items: center;
+  height: 13vh;
+  max-width: 320px;
+  max-height: 72px;
+  @include base-body-text;
+}
+.wallet-hero-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  justify-content: center;
+  padding: 1rem 3rem 1rem 3rem;
+  h1 {
+    margin: 0;
+    @include heading;
+  }
+  h2 {
+    @include base-body-text;
+    margin: 0;
+  }
+}
+.wallet-hero-main {
+  display: flex;
+  flex-direction: row;
+  .wallet-banner {
+    position: relative;
+    right: 120px;
+  }
+}
