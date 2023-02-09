@@ -1,4 +1,4 @@
-@import '../../../global.scss';
+@import "../../../global.scss";
 .creator-rank-list {
   display: flex;
   flex-wrap: wrap;
@@ -11,7 +11,7 @@
   border-radius: 7.5%;
   justify-content: center;
   align-items: center;
-  padding: 1.25rem;
+  padding: 1rem;
   max-height: 240px;
   background-color: $secondary-bg;
   img {
@@ -29,15 +29,28 @@
     color: $caption-color;
   }
   span {
-    font-family: 'Space Mono';
+    font-family: "Space Mono";
     color: white;
   }
 }
 .btn-container {
- @include btn-container;
+  @include btn-container;
 }
 .top-creators {
   h2 {
     margin-bottom: 0;
   }
+}
+.creator-rank {
+  left: -75px;
+  right: 0px;
+  top: -185px;
+  position: relative;
+  width: 12%;
+  height: 11%;
+  background-color: $primary-bg;
+  text-align: center;
+  order: 2;
+  z-index: 2;
+  border-radius: 20px;
 }
