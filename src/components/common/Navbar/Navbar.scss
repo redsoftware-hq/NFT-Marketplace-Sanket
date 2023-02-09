@@ -1,4 +1,4 @@
-@import '../../../global.scss';
+@import "../../../global.scss";
 .navbar {
   display: flex;
   justify-content: end;
@@ -6,8 +6,12 @@
   gap: 16px;
   max-width: 1280px;
   margin: 0 auto;
+  button {
+    margin: 0;
+    padding: 1.15rem;
+  }
   h2 {
-    font-family: 'Space Mono';
+    font-family: "Space Mono";
     font-weight: 400;
     margin-right: auto;
     padding: 1rem 0 1rem 0;
