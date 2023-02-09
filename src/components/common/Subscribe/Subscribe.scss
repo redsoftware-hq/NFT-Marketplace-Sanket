@@ -1,0 +1,20 @@
+@import "../../../global.scss";
+.text-field {
+  padding: 1.15rem 0 1.15rem 1rem;
+  background-color: white;
+  width: 100%;
+  max-width: 415px;
+  border-radius: 20px;
+  color: $primary-bg;
+}
+.subscribe-form {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  button {
+    padding: 1.15rem;
+    position: relative;
+    right: 116px;
+    margin: 0;
+  }
+}

@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom';
-import './About.scss';
-import Storefront from '../../../assests/icons/Storefront.svg';
+import { Link } from "react-router-dom";
+import "./About.scss";
+import Storefront from "../../../assests/icons/Storefront.svg";
+import Subscribe from "../Subscribe/Subscribe";
 function About() {
   return (
     <footer>
@@ -24,6 +25,7 @@ function About() {
           <span>
             Get exclusive promotions & updates straight to your inbox.
           </span>
+          <Subscribe />
         </div>
       </div>
     </footer>
