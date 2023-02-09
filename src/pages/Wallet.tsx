@@ -1,4 +1,10 @@
+import Hero from "../components/Wallet/Hero";
+
 function Wallet() {
-  return <div>Wallet</div>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }
 export default Wallet;

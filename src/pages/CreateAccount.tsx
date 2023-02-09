@@ -1,7 +1,11 @@
+import Hero from "../components/CreateAccount/Hero/Hero";
+
 function CreateAccount() {
   return (
-    <div>CreateAccount</div>
-  )
+    <>
+      <Hero />
+    </>
+  );
 }
 
-export default CreateAccount
+export default CreateAccount;
