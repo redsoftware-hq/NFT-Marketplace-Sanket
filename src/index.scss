@@ -1,6 +1,6 @@
-@import './global.scss';
-:root  {
-  font-family: 'Work Sans', 'Space Mono', Inter, system-ui, Avenir, Helvetica,
+@import "./global.scss";
+:root {
+  font-family: "Work Sans", "Space Mono", Inter, system-ui, Avenir, Helvetica,
     Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -15,6 +15,21 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+::placeholder {
+  color: $primary-bg;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: $primary-bg;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: $primary-bg;
+}
 body {
   margin: 0;
 }
@@ -26,5 +41,5 @@ h3 {
 }
 main {
   max-width: 1280px;
-  margin: 40px auto;
+  margin: auto;
 }
