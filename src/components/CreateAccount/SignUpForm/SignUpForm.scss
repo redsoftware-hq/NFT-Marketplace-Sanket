@@ -1,0 +1,23 @@
+@import "../../../global.scss";
+
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  input {
+    background-color: white;
+    border-radius: $border-raidus;
+    padding: 1rem;
+    color: $primary-bg;
+    width: 100%;
+    max-width: 330px;
+  }
+  button {
+    padding: 1rem;
+    background-color: $accent;
+    border: 0;
+    border-radius: $border-raidus;
+    width: 100%;
+    max-width: 374px;
+  }
+}
