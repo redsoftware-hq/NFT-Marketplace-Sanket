@@ -1,29 +1,38 @@
 @import "../../../global.scss";
+
 .creator-rank-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   gap: 3.5rem;
   justify-content: center;
 }
 .creator-card {
   display: flex;
-  flex-direction: column;
-  border-radius: 7.5%;
+  flex-direction: row;
+  border-radius: $border-raidus;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 0;
   max-height: 240px;
   background-color: $secondary-bg;
+  @include for-size(desktop-up) {
+    padding: 1rem;
+    flex-direction: column;
+  }
   img {
-    padding: 0.75rem;
-    max-width: 120px;
+    padding: 0.75rem 0.75rem 0.75rem 0;
     border-radius: 100%;
+    max-width: 70px;
+    @include for-size(desktop-up) {
+      padding: 0.75rem;
+      max-width: 120px;
+    }
   }
   h4 {
-    @include subheading;
+    @include h4-txt("Work Sans");
     text-align: center;
     margin: 0;
-    font-weight: 600;
+    color: white;
   }
   div {
     color: $caption-color;
@@ -37,20 +46,33 @@
   @include btn-container;
 }
 .top-creators {
+  padding: 1rem;
+  @include for-size(tablet-portrait-up) {
+    padding: 2rem;
+  }
+  @include for-size(phone-only) {
+    padding-bottom: 10rem;
+  }
   h2 {
     margin-bottom: 0;
   }
 }
 .creator-rank {
-  left: -75px;
-  right: 0px;
-  top: -185px;
+  left: 20px;
+  bottom: 25px;
   position: relative;
-  width: 12%;
-  height: 11%;
+  width: 24px;
+  height: 24px;
   background-color: $primary-bg;
   text-align: center;
-  order: 2;
-  z-index: 2;
   border-radius: 20px;
+  @include for-size(desktop-up) {
+    left: -75px;
+    right: 0px;
+    top: -185px;
+    order: 2;
+    z-index: 2;
+  }
+}
+.total-sales {
 }

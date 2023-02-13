@@ -45,6 +45,9 @@
   padding: 2rem;
   h2 {
     margin: 0;
+    @include for-size(phone-only) {
+      @include h3-txt("Work Sans");
+    }
   }
   h3 {
     text-align: left;

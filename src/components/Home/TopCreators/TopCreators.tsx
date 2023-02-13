@@ -64,12 +64,12 @@ function TopCreators() {
         />
       </div>
       <div className="creator-rank-list">
-        {creators.map((creator, index) => (
+        {creators.slice(0, 8).map((creator, index) => (
           <div key={index} className="creator-card">
             <div className="creator-rank">{creator.rank}</div>
             <img src={creator.avatar} alt="avatar" />
-            <h4>{creator.name}</h4>
-            <div>
+            <div className="total-sales">
+              <h4>{creator.name}</h4>
               Total Sales:
               <span> {creator.totalSales} ETH</span>
             </div>
