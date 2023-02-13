@@ -4,42 +4,17 @@ $secondary-bg: #3b3b3b;
 $accent: #a259ff;
 $border-raidus: 20px;
 
-@mixin title {
-  font-weight: 600;
-  font-size: 3rem;
-}
-
-@mixin heading {
-  font-weight: 600;
-  font-size: 2.25rem;
-}
-
-@mixin subheading {
-  font-weight: 400;
-  font-size: 1.25rem;
-}
-
-@mixin caption {
-  font-weight: 400;
-  font-size: 0.75rem;
-}
-
-@mixin base-body-text {
-  font-size: 1rem;
-  font-weight: 400;
-}
-
 @mixin base-btn {
-    display: flex;
-    flex-direction: row;
-    gap: 0.7rem;
-    justify-content: center;
-    align-items: center;
-    padding: 1.25rem 2.25rem;
-    max-height: 60px;
-    margin-bottom: 1rem;
-    border-radius: $border-raidus;
-    font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  gap: 0.7rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem 2.25rem;
+  max-height: 60px;
+  margin-bottom: 1rem;
+  border-radius: $border-raidus;
+  font-weight: 600;
 }
 
 @mixin btn-container {
@@ -48,4 +23,84 @@ $border-raidus: 20px;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
+}
+
+@mixin for-size($size) {
+  @if $size == phone-only {
+    @media (max-width: 599px) {
+      @content;
+    }
+  } @else if $size == tablet-portrait-up {
+    @media (min-width: 600px) and (max-width: 900px) {
+      @content;
+    }
+  } @else if $size == tablet-landscape-up {
+    @media (min-width: 900px) and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $size == desktop-up {
+    @media (min-width: 1024px) and (max-width: 1800px) {
+      @content;
+    }
+  } @else if $size == big-desktop-up {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+}
+
+@mixin body-txt($font) {
+  font-family: $font;
+  font-size: 1rem;
+  font-weight: 400;
+}
+@mixin caption-txt($font) {
+  font-family: $font;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+@mixin h1-txt($font) {
+  font-family: $font;
+  font-size: 3rem;
+  @if $font == "Space Mono" {
+    font-weight: 700;
+  } @else {
+    font-weight: 600;
+  }
+}
+@mixin h2-txt($font) {
+  font-family: $font;
+  font-size: 2rem;
+  @if $font == "Space Mono" {
+    font-weight: 700;
+  } @else {
+    font-weight: 600;
+  }
+}
+@mixin h3-txt($font) {
+  font-family: $font;
+  font-size: 1.75rem;
+  @if $font == "Space Mono" {
+    font-weight: 700;
+  } @else {
+    font-weight: 600;
+  }
+}
+@mixin h4-txt($font) {
+  font-family: $font;
+  font-size: 1.5rem;
+  @if $font == "Space Mono" {
+    font-weight: 700;
+  } @else {
+    font-weight: 600;
+  }
+}
+@mixin h5-txt($font) {
+  font-family: $font;
+  font-size: 1.25rem;
+  @if $font == "Space Mono" {
+    font-weight: 700;
+  } @else {
+    font-weight: 600;
+  }
 }
