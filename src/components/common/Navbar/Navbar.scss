@@ -11,11 +11,9 @@
     padding: 1.15rem;
   }
   h2 {
-    font-family: "Space Mono";
-    font-weight: 400;
     margin-right: auto;
     padding: 1rem 0 1rem 0;
-    @include subheading;
+    @include h4-txt("Space Mono");
   }
   a {
     text-decoration: none;

@@ -5,11 +5,11 @@
   gap: 1rem;
   padding: 2rem;
   h1 {
-    @include heading;
+    @include h1-txt("Work Sans");
     margin: 0;
   }
   h2 {
-    @include subheading;
+    @include h2-txt("Work Sans");
     margin: 0;
   }
 }

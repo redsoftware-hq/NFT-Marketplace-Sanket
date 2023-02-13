@@ -15,7 +15,7 @@
   height: 13vh;
   max-width: 320px;
   max-height: 72px;
-  @include base-body-text;
+  @include body-txt("Work Sans");
 }
 .wallet-hero-container {
   display: flex;
@@ -25,10 +25,10 @@
   padding: 1rem 3rem 1rem 3rem;
   h1 {
     margin: 0;
-    @include heading;
+    @include h1-txt("Work Sans");
   }
   h2 {
-    @include base-body-text;
+    @include body-txt("Work Sans");
     margin: 0;
   }
 }
