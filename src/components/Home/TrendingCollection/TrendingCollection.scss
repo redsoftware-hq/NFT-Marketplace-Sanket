@@ -1,0 +1,68 @@
+@import "../../../global.scss";
+.trending-collection {
+  padding: 3rem;
+  @include for-size(tablet-portrait-up) {
+    padding: 2rem;
+    h2 {
+      @include h3-txt("Work Sans");
+    }
+    h3 {
+      @include h4-txt("Work Sans");
+    }
+  }
+  @include for-size(phone-only) {
+    padding: 1rem;
+    h2 {
+      @include h3-txt("Work Sans");
+    }
+    h3 {
+      @include body-txt("Work Sans");
+    }
+  }
+}
+.view-collection {
+  @include h5-txt("Space Mono");
+  border-radius: $border-raidus;
+  background-color: $accent;
+  width: 100%;
+  max-width: 100px;
+  max-height: 100px;
+  text-align: center;
+  padding: 2rem 0;
+  @include for-size(phone-only) {
+    max-width: 95px;
+    max-height: 95px;
+  }
+}
+.small-thumbnail {
+  width: 100%;
+  max-width: 100px;
+  max-height: 100px;
+  @include for-size(phone-only) {
+    max-width: 95px;
+    max-height: 95px;
+  }
+}
+.small-thumbs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.collection-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1rem 0;
+}
+.artist-name {
+  display: flex;
+  gap: 0.5rem;
+}
+.collection {
+  display: grid;
+  gap: 1rem;
+  h4 {
+    margin: 0;
+  }
+}
