@@ -1,4 +1,18 @@
-@import '../../../global.scss';
+@import "../../../global.scss";
+.discover {
+  padding: 2rem;
+  margin-bottom: 1rem;
+  h2 {
+    margin: 0;
+  }
+  @include for-size(phone-only) {
+    padding-bottom: 7rem;
+    h2 {
+      @include h3-txt("Work Sans");
+    }
+  }
+}
+
 .price-info {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -7,59 +21,73 @@
   padding-bottom: 1rem;
   span {
     color: $caption-color;
-    font-family: 'Space Mono';
-    @include caption;
+    @include caption-txt("Space Mono");
   }
   div {
-    font-family: 'Space Mono';
-    @include caption;
+    @include caption-txt("Space Mono");
   }
 }
+
 .artist-info {
   display: flex;
   flex-direction: row;
   gap: 1rem;
   padding: 1rem;
   h5 {
-    font-family: 'Space Mono';
-    @include base-body-text;
+    @include body-txt("Space Mono");
     margin: 0;
   }
 }
+
 .nftCardList {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   gap: 3.5rem;
   justify-content: center;
-  //   width: 100%;
 }
+
 .nftCard {
-  //   flex-basis: 35%;
-  background: #3b3b3b;
-  border-radius: 5%;
+  background: $secondary-bg;
+  border-radius: $border-raidus;
   max-width: 330px;
   max-height: 469px;
+  @include for-size(phone-only) {
+    img {
+      max-width: 315px;
+      max-height: 402px;
+    }
+  }
   h4 {
     padding: 0.5rem 1rem 0 1rem;
     margin: 0;
-    @include subheading;
+    @include h4-txt("Work Sans");
     font-weight: 600;
   }
 }
-.button-container {
-  display: flex;
-  flex-direction: row;
-  padding: 0.5rem;
-  h3 {
-    margin-top: 0.5rem;
-  }
-}
-.discover {
-  margin-bottom: 1rem;
-  h2 {
-    margin: 0;
-  }
-}
+
 .btn-container {
   @include btn-container;
+  button {
+    margin: 0;
+  }
+  @include for-size(phone-only) {
+    position: relative;
+    flex-wrap: wrap;
+    button {
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      top: 1594px;
+      width: 100%;
+      max-width: 320px;
+      padding: 1.5rem 2.25rem;
+    }
+    h3 {
+      width: 100%;
+      @include h5-txt("Work Sans");
+    }
+  }
 }

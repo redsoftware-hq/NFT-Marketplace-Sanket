@@ -1,28 +1,69 @@
+@import "../../../global.scss";
 .digest {
-  max-width: 1280px;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  max-height: 550px;
+  padding: 1rem;
+  @include for-size(tablet-portrait-up) {
+    padding: 2rem;
+  }
   .digest-card {
     display: grid;
     grid-template-columns: repeat(2, 3fr);
     border-radius: 1.25rem;
-    padding: 60px;
+    gap: 1rem;
+    padding: 3rem;
     background-color: #3b3b3b;
     margin: auto;
+    @include for-size(phone-only) {
+      padding: 1rem;
+      grid-template-columns: unset;
+      grid-template-rows: repeat(3, auto);
+      background-color: $primary-bg;
+    }
   }
   .subscribe {
-    h2 {
-      font-weight: 600;
-      font-size: 2.5rem;
+    @include for-size(phone-only) {
+      form {
+        align-items: unset;
+      }
+      h2 {
+        margin: 0;
+        @include h3-txt("Work Sans");
+      }
+      h3 {
+        @include body-txt("Work Sans");
+      }
     }
-    span {
-      font-size: 1.5rem;
+    @include for-size(tablet-portrait-up) {
+      form {
+        flex-flow: column nowrap;
+        gap: 1rem;
+        align-items: unset;
+      }
+      button {
+        max-width: 305px;
+        position: unset;
+      }
+      h2 {
+        margin: 0;
+        @include h3-txt("Work Sans");
+      }
+      h3 {
+        @include body-txt("Work Sans");
+      }
     }
   }
   img {
-    width: 425px;
-    height: 310px;
+    max-width: 425px;
+    max-height: 310px;
     padding: 0.5rem;
+    @include for-size(phone-only) {
+      max-width: 315px;
+      max-height: 255px;
+    }
+    @include for-size(tablet-portrait-up) {
+      max-width: 300px;
+      max-height: 280px;
+    }
   }
 }

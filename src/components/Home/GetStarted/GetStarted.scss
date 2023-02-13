@@ -1,3 +1,4 @@
+@import "../../../global.scss";
 .info-card {
   display: flex;
   flex-direction: column;
@@ -8,23 +9,62 @@
   padding: 1rem;
   max-width: 330px;
   text-align: center;
+  @include for-size(tablet-portrait-up) {
+    max-width: 210px;
+  }
+  @include for-size(phone-only) {
+    flex-direction: row;
+    max-width: 315px;
+    max-height: 157px;
+    text-align: unset;
+  }
   .icon {
-    max-width: 205px;
+    max-width: 190px;
+    @include for-size(tablet-potrait-up) {
+      max-width: 160px;
+    }
+    @include for-size(phone-only) {
+      max-width: 100px;
+    }
+  }
+  .text-info {
+    padding: 0 1rem;
+    @include for-size(phone-only) {
+      h4 {
+        margin: 0;
+      }
+      span {
+        @include caption-txt("Work Sans");
+      }
+    }
   }
 }
 .container {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  padding: 2rem;
   h2 {
-    margin: 0%;
+    margin: 0;
   }
   h3 {
     text-align: left;
   }
+  @include for-size(phone-only) {
+    h3 {
+      @include h5-txt("Work Sans");
+    }
+  }
 }
 .info-card-list {
-  display: flex;
-  flex-direction: row;
+  display: grid;
   justify-content: center;
   gap: 3.5rem;
+  @include for-size(tablet-portrait-up) {
+    grid-template-columns: repeat(3, auto);
+    gap: 1rem;
+    justify-content: unset;
+  }
+  @include for-size(desktop-up) {
+    grid-template-columns: repeat(3, auto);
+  }
 }
