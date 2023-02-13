@@ -1,29 +1,34 @@
+@import "../../../global.scss";
 footer {
   background-color: #3b3b3b;
   h3 {
-    font-weight: 700;
-    font-family: 'Space Mono';
+    @include h3-txt("Space Mono");
   }
   .about {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    background: #3b3b3b;
+    gap: 2rem;
+    background: $secondary-bg;
     margin: auto;
     padding: 1.5rem;
     max-width: 1280px;
+    @include for-size(desktop-up) {
+      grid-template-columns: repeat(3, 1fr);
+    }
     span {
-      font-size: small;
+      @include body-txt("Work Sans");
       color: #cccccc;
     }
     .wrapper {
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      span {
+        padding: 0 0.25rem;
+      }
       a {
         color: #cccccc;
         text-decoration: none;
-        font-size: small;
+        @include body-txt("Work Sans");
       }
     }
   }
@@ -36,4 +41,9 @@ footer {
   img {
     width: 10%;
   }
+}
+.socials {
+  padding: 0 0.15rem;
+  max-width: 32px;
+  max-height: 32px;
 }

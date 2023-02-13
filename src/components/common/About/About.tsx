@@ -1,18 +1,29 @@
 import { Link } from "react-router-dom";
 import "./About.scss";
 import Storefront from "../../../assests/icons/Storefront.svg";
+import DiscordLogo from "../../../assests/icons/DiscordLogo.svg";
+import InstagramLogo from "../../../assests/icons/InstagramLogo.svg";
+import TwitterLogo from "../../../assests/icons/TwitterLogo.svg";
+import YoutubeLogo from "../../../assests/icons/YoutubeLogo.svg";
 import Subscribe from "../Subscribe/Subscribe";
+
 function About() {
   return (
     <footer>
       <div className="about">
         <div className="wrapper">
-          <span className="marketplace">
+          <div className="marketplace">
             <img src={Storefront} />
             <h3>NFT Marketplace</h3>
-          </span>
+          </div>
           <span>NFT marketplace UI created with Anima for Figma.</span>
           <span>Join our community</span>
+          <div>
+            <img className="socials" src={DiscordLogo} />
+            <img className="socials" src={YoutubeLogo} />
+            <img className="socials" src={InstagramLogo} />
+            <img className="socials" src={TwitterLogo} />
+          </div>
         </div>
         <div className="wrapper">
           <h3>Explore</h3>
